@@ -1,0 +1,168 @@
+.form-control{
+    display: inline-block!important;
+}
+
+#datatable_filter label .form-control{
+    width: 231px!important;
+}
+
+#datatable{
+    width: 100%!important;
+}
+
+th:before{
+    content: ''!important;
+}
+
+
+th:after{
+    content: ''!important;
+}
+
+.c_label_thead{
+    height: 1.11rem!important;
+    padding: 0!important;
+    margin-left: 9px!important;
+}
+
+td{
+    padding-bottom: 5px!important;
+}
+
+.c_row_delete, .c_row_update{
+    padding-left: 12px!important;
+    padding-right: 12px!important;
+}
+
+
+.tab-content{
+    padding-left: 0!important;
+}
+
+.nav-item{
+    padding-left: 0!important;
+}
+
+#datatable_filter{
+    float: right!important;
+}
+
+.pagination{
+    margin-top: 10px!important;
+    float: right!important;
+}
+
+.row{
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+#datatable_processing{
+    position: absolute!important;
+    top: 0!important;
+    bottom: 0!important;
+    left: 0!important;
+    right: 0!important;
+    margin: auto!important;
+    width: 90px!important;
+    padding-top: 13px!important;
+    padding-left: 9px;
+    height: 50px!important;
+}
+
+td{
+    text-align: center!important;
+    vertical-align: middle!important;
+}
+
+th{
+    text-align: center!important;
+    vertical-align: middle!important;
+}
+
+.c_label_thead:before{
+    top: 0!important;
+    bottom: 0!important;
+    right: 0!important;;
+    left: 0!important;
+    margin: auto;
+    margin-right: -8px!important;
+}
+
+
+.c_label_thead2:before{
+    top: -3px!important;
+    bottom: 0!important;
+    right: 0!important;;
+    left: 2px!important;
+    margin: auto;
+    margin-right: 3px!important;
+}
+
+
+.c_switch_margin{
+    margin-left: 12px;
+}
+
+.c_th_max_width{
+    width: 109px!important;
+}
+
+
+
+.file-path{
+    cursor: pointer;
+}
+
+
+.pagination .page-item.active .page-link {
+    transition: all .2s linear;
+    border-radius: .125rem;
+    background-color: #4285f4!important;
+    color: #fff;
+}
+
+.dataTables_info{
+    margin-top: 10px;
+}
+
+.c_dropzone{
+    margin-left: 25px;
+    margin-right: 40px;
+    width: 97.3%;
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .view-cascade {
+        display: none!important;
+    }
+}
+
+
+
+#datatable_filter{
+    padding-top: 11px;
+}
+
+.md-form.md-outline {
+    margin-top: 45px;
+}
+
+
+.select-wrapper{
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.c_back{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 16px;
+}
+
+.cke_dialog_ui_hbox_last{
+    display: inherit!important;
+}
