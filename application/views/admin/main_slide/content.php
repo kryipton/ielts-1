@@ -31,6 +31,13 @@
         display: none;
     }
 
+    th:nth-child(9){
+        display: none;
+    }
+    td:nth-child(9){
+        display: none;
+    }
+
     .dt-buttons{
         display: none;
     }

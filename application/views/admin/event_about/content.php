@@ -1,6 +1,15 @@
 
 <!--tabledeki fieldleri gizletmek ucun olan style bunu external css in icinde yazma yoxsa diger seyfelerdeki tablelerde korlanar-->
 <style>
+
+    th:nth-child(1){
+        display: none;
+    }
+
+    td:nth-child(1){
+        display: none;
+    }
+
     th:nth-child(2){
         display: none;
     }
@@ -20,36 +29,27 @@
     th:nth-child(7){
         display: none;
     }
+
     td:nth-child(7){
         display: none;
     }
 
+
     th:nth-child(8){
         display: none;
     }
+
     td:nth-child(8){
         display: none;
     }
 
-    th:nth-child(9){
+
+
+    .c_row_delete{
         display: none;
     }
 
-    td:nth-child(9){
-        display: none;
-    }
-
-    th:nth-child(10){
-        display: none;
-    }
-    td:nth-child(10){
-        display: none;
-    }
-
-    th:nth-child(11){
-        display: none;
-    }
-    td:nth-child(11){
+    .c_row_create{
         display: none;
     }
 
@@ -57,17 +57,23 @@
         display: none;
     }
 
+    #datatable_filter{
+        display: none;
+    }
+
+
+
 </style>
 <!--tabledeki fieldleri gizletmek ucun olan style bunu external css in icinde yazma yoxsa diger seyfelerdeki tablelerde korlanar-->
 
 
 <section>
 
+
     <div class="card card-cascade narrower z-depth-0 pb-4">
 
         <!--tablenin basliqi-->
-        <div
-            class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
 
             <div style="visibility: hidden;">
                 <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i
@@ -76,7 +82,7 @@
                         class="fas fa-columns mt-0"></i></button>
             </div>
 
-            <a class="white-text mx-3">Təkliflər</a>
+            <a class="white-text mx-3">Tədbirlər Haqqında</a>
 
             <div style="visibility: hidden;">
                 <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i
@@ -90,8 +96,8 @@
         </div>
         <!--tablenin basliqi-->
 
-        <div class="px-4">
 
+        <div class="px-4">
             <!-- Tablenin ozu -->
             <div class="table-responsive">
                 <!--Table-->
@@ -100,6 +106,7 @@
                     <!-- Table head -->
                     <thead>
                     <tr>
+
 
                         <th class="c_switch_th" data-orderable="false" style="width: 20px!important; padding: 5px!important;">
 
@@ -111,22 +118,15 @@
 
                         </th>
 
+                            <th data-orderable="false" class="c_th_max_width"><a>id</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq AZ</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq En</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq Ru</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Tədbir Haqqında AZ</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Tədbir Haqqında En</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Tədbir Haqqında Ru</a></th>
 
-                        <th data-orderable="true" class="c_th_max_width"><a>id<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Adı Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Adı En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Adı Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Haqqında Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Haqqında En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Haqqında Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Basliq Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Basliq En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Basliq Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Təklifin Şəkli<i class="fas fa-sort ml-1"></i></a></th>
-
-
-                        <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Operations</a></th>
-
+                        <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Əməliyyatlar</a></th>
 
                     </tr>
                     </thead>

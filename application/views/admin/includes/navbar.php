@@ -9,7 +9,7 @@
             <!-- Logo -->
             <li class="logo-sn waves-effect py-3">
                 <div class="text-center">
-                    <a href="#" class="pl-0"><img style="top: 0px;width: 80px;height: 83px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;" src="<?php echo base_url("public/admin/img/loqo.png")?>"></a>
+<!--                    <a href="#" class="pl-0"><img style="top: 0px;width: 80px;height: 83px;position: absolute;left: 0;right: 0;bottom: 0;margin: auto;" src="--><?php //echo base_url("public/admin/img/loqo.png")?><!--"></a>-->
                 </div>
             </li>
 
@@ -23,15 +23,15 @@
                     <!--Kurslar-->
                     <li>
                         <a class="collapsible-header waves-effect arrow-r">
-                            <i class="w-fa fas fa-suitcase-rolling" style="font-size: 18px"></i>Kurslar<i class="fas fa-angle-down rotate-icon"></i>
+                            <i class="fas fa-graduation-cap"></i>Kurslar<i class="fas fa-angle-down rotate-icon"></i>
                         </a>
                         <div class="collapsible-body">
                             <ul>
 
                                 <!-- Turlar -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_tours")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-suitcase-rolling" style="font-size: 18px"></i>
+                                    <a href="<?php echo base_url("Panel_admin_page_courses")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-graduation-cap"></i>
                                         Kurslar
                                     </a>
                                 </li>
@@ -39,9 +39,9 @@
 
                                 <!-- Partnyorlar -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_tour_includes")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-image"></i>
-                                        Kurslara Daxildir
+                                    <a href="<?php echo base_url("Panel_admin_page_course_about")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-book-open"></i>
+                                        Kurslara Haqqında
                                     </a>
                                 </li>
 
@@ -49,6 +49,37 @@
                         </div>
                     </li>
                     <!--Kurslar-->
+
+
+                    <!--Müəllimlər-->
+                    <li>
+                        <a class="collapsible-header waves-effect arrow-r">
+                            <i class="fas fa-chalkboard-teacher"></i>Müəllimlər<i class="fas fa-angle-down rotate-icon"></i>
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+
+                                <!-- Turlar -->
+                                <li>
+                                    <a href="<?php echo base_url("Panel_admin_page_teachers")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                        Müəllimlər
+                                    </a>
+                                </li>
+
+
+                                <!-- Partnyorlar -->
+                                <li>
+                                    <a href="<?php echo base_url("Panel_admin_page_teachers_about")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-book-open"></i>
+                                        Müəllimlər Haqqında
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <!--Müəllimlər-->
 
 
                     <!--Bloqlar-->
@@ -64,7 +95,7 @@
                                 <li>
                                     <a href="<?php echo base_url("Panel_admin_page_blog_category")?>" class="collapsible-header waves-effect">
                                         <i class="fas fa-id-card"></i>
-                                        Blog Kateqoriya
+                                        Blog Kateqoriyaları
                                     </a>
                                 </li>
 
@@ -82,49 +113,42 @@
                     <!--Bloqlar-->
 
 
-                    <!--Slaydlar-->
+
+                    <!--Haqqımızda-->
                     <li>
                         <a class="collapsible-header waves-effect arrow-r">
-                            <i class="w-fa fas fa-clone"></i>Slaydlar<i class="fas fa-angle-down rotate-icon"></i>
+                            <i class="fas fa-book-reader"></i>Haqqımızda<i class="fas fa-angle-down rotate-icon"></i>
                         </a>
                         <div class="collapsible-body">
                             <ul>
 
                                 <!-- Slayd -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_main_slide")?>" class="collapsible-header waves-effect">
-                                        <i class="far fa-clone"></i>
-                                        Əsas Slayd
-                                    </a>
-                                </li>
-
-                                <!-- Slayd -->
-                                <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_additional_slide")?>" class="collapsible-header waves-effect">
-                                        <i class="far fa-clone"></i>
-                                        İkinci Slayd
+                                    <a href="<?php echo base_url("Panel_admin_page_about")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-book-reader"></i>
+                                        Haqqımızda
                                     </a>
                                 </li>
 
 
                                 <!-- Slayd -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_additional_slide2")?>" class="collapsible-header waves-effect">
-                                        <i class="far fa-clone"></i>
-                                        Üçüncü Slayd
+                                    <a href="<?php echo base_url("Panel_admin_page_study_abroad")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-plane"></i>
+                                        Xarcdə Təhsil
                                     </a>
                                 </li>
 
                             </ul>
                         </div>
                     </li>
-                    <!--Slaydlar-->
+                    <!--Haqqımızda-->
 
 
                     <!--FAQs-->
                     <li>
                         <a class="collapsible-header waves-effect arrow-r">
-                            <i class="w-fa fas fa-clone"></i>FAQs<i class="fas fa-angle-down rotate-icon"></i>
+                            <i class="fas fa-database"></i>FAQs<i class="fas fa-angle-down rotate-icon"></i>
                         </a>
                         <div class="collapsible-body">
                             <ul>
@@ -132,15 +156,15 @@
                                 <!-- FAQs -->
                                 <li>
                                     <a href="<?php echo base_url("Panel_admin_page_faqs")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-id-card"></i>
+                                        <i class="fas fa-database"></i>
                                         FAQs
                                     </a>
                                 </li>
 
                                 <!-- FAQs -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_faqs")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-id-card"></i>
+                                    <a href="<?php echo base_url("Panel_admin_page_faqs_about")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-book-open"></i>
                                         FAQs Haqqında
                                     </a>
                                 </li>
@@ -156,14 +180,14 @@
                     <!--Isdifadeciler ve mesajlar-->
                     <li>
                         <a class="collapsible-header waves-effect arrow-r">
-                            <i class="w-fa fas fa-user"></i>Adminlər və İstifadəçilər<i class="fas fa-angle-down rotate-icon"></i>
+                            <i class="fas fa-users"></i>Mesajlar<i class="fas fa-angle-down rotate-icon"></i>
                         </a>
                         <div class="collapsible-body">
                             <ul>
 
                                 <?php if ($this->session->userdata("user_role") != 0){ ?>
 
-                                    <!-- Users -->
+                                    <!-- Adminlər -->
                                     <li>
                                         <a href="<?php echo base_url("Panel_admin_page_users")?>" class="collapsible-header waves-effect">
                                             <i class="fas fa-users"></i>
@@ -176,11 +200,12 @@
 
                                 <!-- Mesajlar -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_cabinet")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-users"></i>
-                                        İstifadəçilər
+                                    <a href="<?php echo base_url("Panel_admin_page_messages_about")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-book-open"></i>
+                                        Mesajlar Haqqında
                                     </a>
                                 </li>
+
 
                                 <!-- Mesajlar -->
                                 <li>
@@ -190,19 +215,10 @@
                                     </a>
                                 </li>
 
-                                <!-- Partnyorlar -->
-                                <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_partners")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-users"></i>
-                                        Partnyorlar
-                                    </a>
-                                </li>
-
                             </ul>
                         </div>
                     </li>
                     <!--Isdifadeciler ve mesajlar-->
-
 
 
                     <!--Tədbirlər-->
@@ -215,15 +231,15 @@
 
                                 <!-- Xidmətlər haqqinda-->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_offers_about")?>" class="collapsible-header waves-effect">
-                                        <i class="fas fa-info-circle"></i>
+                                    <a href="<?php echo base_url("Panel_admin_page_events_about")?>" class="collapsible-header waves-effect">
+                                        <i class="fas fa-book-open"></i>
                                         Tədbirlər Haqqında
                                     </a>
                                 </li>
 
                                 <!-- Təkliflər -->
                                 <li>
-                                    <a href="<?php echo base_url("Panel_admin_page_offers")?>" class="collapsible-header waves-effect">
+                                    <a href="<?php echo base_url("Panel_admin_page_events")?>" class="collapsible-header waves-effect">
                                         <i class="fas fa-info-circle"></i>
                                         Tədbirlər
                                     </a>
@@ -235,46 +251,32 @@
                     <!--Tədbirlər-->
 
 
-
-
-
-                    <!-- Haqqımızda -->
+                    <!-- Əlavə Məlumatlar -->
                     <li>
-                        <a href="<?php echo base_url("Panel_admin_page_about")?>" class="collapsible-header waves-effect">
+                        <a href="<?php echo base_url("Panel_admin_page_info")?>" class="collapsible-header waves-effect">
                             <i class="fas fa-book-open"></i>
-                            Haqqımızda
+                            Əlavə Məlumatlar
                         </a>
                     </li>
 
 
-
-
-
-                    <!-- İnfo -->
+                    <!-- Slayd -->
                     <li>
-                        <a href="<?php echo base_url("Panel_admin_page_faqs")?>" class="collapsible-header waves-effect">
-                            <i class="fas fa-id-card"></i>
-                            Nailiyyətlərimiz
+                        <a href="<?php echo base_url("Panel_admin_page_main_slide")?>" class="collapsible-header waves-effect">
+                            <i class="far fa-clone"></i>
+                            Əsas Slayd
                         </a>
                     </li>
 
 
-                    <!-- Feedbacks -->
+                    <!-- Geri Dönüşlər -->
                     <li>
-                        <a href="<?php echo base_url("Panel_admin_page_faqs")?>" class="collapsible-header waves-effect">
+                        <a href="<?php echo base_url("Panel_admin_page_feedbacks")?>" class="collapsible-header waves-effect">
                             <i class="fas fa-id-card"></i>
-                            Məzunların fikirləri
+                            Feedback-lər
                         </a>
                     </li>
 
-
-                    <!-- Xaricdə Təhsil -->
-                    <li>
-                        <a href="<?php echo base_url("Panel_admin_page_faqs")?>" class="collapsible-header waves-effect">
-                            <i class="fas fa-id-card"></i>
-                            Xaricdə Təhsil
-                        </a>
-                    </li>
 
 
                     <!-- Əlaqə -->
@@ -330,7 +332,7 @@
                         <i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profil</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="<?php echo base_url("Panel_admin_page_secure_login_page/logout")?>">Çıxış</a>
+                        <a class="dropdown-item" href="<?php echo base_url("Admin/logout")?>">Çıxış</a>
                     </div>
                 </li>
 

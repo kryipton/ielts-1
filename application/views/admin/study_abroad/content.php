@@ -1,6 +1,15 @@
 
 <!--tabledeki fieldleri gizletmek ucun olan style bunu external css in icinde yazma yoxsa diger seyfelerdeki tablelerde korlanar-->
 <style>
+
+    th:nth-child(1){
+        display: none;
+    }
+
+    td:nth-child(1){
+        display: none;
+    }
+
     th:nth-child(2){
         display: none;
     }
@@ -20,67 +29,35 @@
     th:nth-child(7){
         display: none;
     }
+
     td:nth-child(7){
         display: none;
     }
 
+
     th:nth-child(8){
         display: none;
     }
+
     td:nth-child(8){
         display: none;
     }
 
-    th:nth-child(9){
+
+    th:nth-child(10){
         display: none;
     }
 
-    td:nth-child(9){
-        display: none;
-    }
-
-
-
-    th:nth-child(12){
-        display: none;
-    }
-    td:nth-child(12){
-        display: none;
-    }
-
-    th:nth-child(14){
-        display: none;
-    }
-    td:nth-child(14){
-        display: none;
-    }
-
-    th:nth-child(15){
-        display: none;
-    }
-    td:nth-child(15){
-        display: none;
-    }
-
-    th:nth-child(16){
-        display: none;
-    }
-    td:nth-child(16){
+    td:nth-child(10){
         display: none;
     }
 
 
-    th:nth-child(18){
-        display: none;
-    }
-    td:nth-child(18){
+    .c_row_delete{
         display: none;
     }
 
-    th:nth-child(19){
-        display: none;
-    }
-    td:nth-child(19){
+    .c_row_create{
         display: none;
     }
 
@@ -88,17 +65,23 @@
         display: none;
     }
 
+    #datatable_filter{
+        display: none;
+    }
+
+
+
 </style>
 <!--tabledeki fieldleri gizletmek ucun olan style bunu external css in icinde yazma yoxsa diger seyfelerdeki tablelerde korlanar-->
 
 
 <section>
 
+
     <div class="card card-cascade narrower z-depth-0 pb-4">
 
         <!--tablenin basliqi-->
-        <div
-            class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
 
             <div style="visibility: hidden;">
                 <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i
@@ -107,7 +90,7 @@
                         class="fas fa-columns mt-0"></i></button>
             </div>
 
-            <a class="white-text mx-3">Kurslar</a>
+            <a class="white-text mx-3">Xaricdə Təhsil bölməsi</a>
 
             <div style="visibility: hidden;">
                 <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i
@@ -121,8 +104,8 @@
         </div>
         <!--tablenin basliqi-->
 
-        <div class="px-4">
 
+        <div class="px-4">
             <!-- Tablenin ozu -->
             <div class="table-responsive">
                 <!--Table-->
@@ -131,6 +114,7 @@
                     <!-- Table head -->
                     <thead>
                     <tr>
+
 
                         <th class="c_switch_th" data-orderable="false" style="width: 20px!important; padding: 5px!important;">
 
@@ -142,30 +126,17 @@
 
                         </th>
 
+                            <th data-orderable="false" class="c_th_max_width"><a>id</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq AZ</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq En</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq Ru</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda AZ</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda En</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Ru</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Şəkil</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Link</a></th>
 
-                        <th data-orderable="true" class="c_th_max_width"><a>id<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Adı Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Adı En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Adı Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Haqqında Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Haqqında En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Haqqında Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Qeydiyyatdan keçmiş istifadəçilər<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun tarixi<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Qiyməti<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursda iştirak edəcək maksimum tələbə sayı<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Şəkli<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Leksiyalar<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>İmtahanlar<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Müddəti<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Səviyyəsi<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Sertifikat<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>qiymətləndirmələr<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>qiymətləndirmələr<i class="fas fa-sort ml-1"></i></a></th>
-
-
-                        <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Operations</a></th>
-
+                        <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Əməliyyatlar</a></th>
 
                     </tr>
                     </thead>

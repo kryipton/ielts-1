@@ -18,7 +18,13 @@
         display: none;
     }
 
+    th:nth-child(6){
+        display: none;
+    }
 
+    td:nth-child(6){
+        display: none;
+    }
 
     th:nth-child(7){
         display: none;
@@ -37,13 +43,6 @@
         display: none;
     }
 
-    th:nth-child(9){
-        display: none;
-    }
-
-    td:nth-child(9){
-        display: none;
-    }
 
 
     .c_row_delete{
@@ -83,7 +82,7 @@
                         class="fas fa-columns mt-0"></i></button>
             </div>
 
-            <a class="white-text mx-3">Haqqımızda bölməsi</a>
+            <a class="white-text mx-3">Müəllimlər Haqqında</a>
 
             <div style="visibility: hidden;">
                 <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i
@@ -120,13 +119,12 @@
                         </th>
 
                             <th data-orderable="false" class="c_th_max_width"><a>id</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Başlıqı AZ</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Başlıqı En</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Başlıqı Ru</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Şəkil</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda AZ</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda En</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Ru</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq AZ</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq En</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Başlıq Ru</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Tədbir Haqqında AZ</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Tədbir Haqqında En</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Tədbir Haqqında Ru</a></th>
 
                         <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Əməliyyatlar</a></th>
 

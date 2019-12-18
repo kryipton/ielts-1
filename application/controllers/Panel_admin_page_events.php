@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Panel_admin_page_courses extends MY_Controller{
+class Panel_admin_page_events extends MY_Controller{
 
     private $view_folder = "";
     private $table_name= "";
@@ -25,13 +25,13 @@ class Panel_admin_page_courses extends MY_Controller{
         parent::__construct();
 
 //      adminin icindeki papkanin adi
-        $this->view_folder = "course";
+        $this->view_folder = "events";
 
 //      tablemizin adi
-        $this->table_name = "course";
+        $this->table_name = "events";
 
 //      sekilleri ve fayllari yukleyeceyimiz yer meselen: base_url("uploads/teachers/")
-        $this->upload_path = "uploads/course/";
+        $this->upload_path = "uploads/events/";
 
 //      eger sekil veya file varsa tablenin hansi fieldinnen adini goturub papkadan silsin
         $this->table_file_field_names = array(
@@ -44,35 +44,20 @@ class Panel_admin_page_courses extends MY_Controller{
         $this->field_names = $this->Core->list_fields($this->table_name);
 
         $this->label_name_and_input_name = array(
-            "Kursun Adı Az" => "(group1)name_az",
-            "Kursun Adı En" => "(group1)name_en",
-            "Kursun Adı Ru" => "(group1)name_ru",
+            "Tədbirin Adı Az" => "(group1)name_az(required)",
+            "Tədbirin Adı En" => "(group1)name_en(required)",
+            "Tədbirin Adı Ru" => "(group1)name_ru(required)",
 
-            "Kursun Haqqında Az" => "(group2)desc_az",
-            "Kursun Haqqında En" => "(group2)desc_en",
-            "Kursun Haqqında Ru" => "(group2)desc_ru",
+            "Tədbirin Haqqında Az" => "(group2)desc_az",
+            "Tədbirin Haqqında En" => "(group2)desc_en",
+            "Tədbirin Haqqında Ru" => "(group2)desc_ru",
 
-            "Qeydiyyatdan keçmiş istifadəçilər" => "enrolled_users",
+            "Tədbirin Tarixi" => "date",
 
-            "Kursun Tarixi" => "course_time",
+            "Tədbirin başlama saatı" => "start_time",
+            "Tədbirin bitmə saatı" => "end_time",
 
-            "Kursun Qiyməti" => "price",
-
-            "Kursda İştirak edəcək maksimum tələbə sayı" => "seats",
-
-            "Kursda Keciriləcək leksiyaların sayı" => "lectures",
-
-            "Kursda Keciriləcək imtahanların sayı" => "quizzes",
-
-            "Kursun müddəti" => "duration",
-
-            "Kursun səviyyəsi" => "skill_level",
-
-            "Kursun sertifikatı" => "certificate",
-
-            "Kursun qiymətləndirmələri" => "assessments",
-
-            "Kursun Şəkli" => "img",
+            "Tədbirin Şəkli" => "img",
 
         );
 
@@ -81,30 +66,14 @@ class Panel_admin_page_courses extends MY_Controller{
             "name_en" => "text",
             "name_ru" => "text",
 
+            "date" => "date",
+
+            "start_time" => "time",
+            "end_time" => "time",
+
             "desc_az" => "editor",
             "desc_en" => "editor",
             "desc_ru" => "editor",
-
-
-            "enrolled_users" => "number",
-
-            "course_time" => "date",
-
-            "price" => "number",
-
-            "seats" => "number",
-
-            "lectures" => "number",
-
-            "quizzes" => "number",
-
-            "duration" => "text",
-
-            "skill_level" => "text",
-
-            "certificate" => "text",
-
-            "assessments" => "text",
 
             "img" => "file",
         );
@@ -114,32 +83,14 @@ class Panel_admin_page_courses extends MY_Controller{
             "name_en" => "name_en",
             "name_ru" => "name_ru",
 
+            "date" => "date",
+
+            "start_time" => "start_time",
+            "end_time" => "end_time",
+
             "desc_az" => "(editor)desc_az",
             "desc_en" => "(editor)desc_en",
             "desc_ru" => "(editor)desc_ru",
-
-
-            "enrolled_users" => "enrolled_users",
-
-            "course_time" => "course_time",
-
-            "price" => "price",
-
-            "seats" => "seats",
-
-            "lectures" => "lectures",
-
-            "quizzes" => "quizzes",
-
-            "duration" => "duration",
-
-            "skill_level" => "skill_level",
-
-            "certificate" => "certificate",
-
-            "assessments" => "assessments",
-
-
 
             "img" => "(file)img",
 
@@ -151,28 +102,28 @@ class Panel_admin_page_courses extends MY_Controller{
 //==============================================================================================
 
 //      tableye melumatlarin import edilmesi
-        $this->import_link                    = base_url("Panel_admin_page_courses/import/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->import_link                    = base_url("Panel_admin_page_events/import/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      tabledeki melumatlarin update olunduqu link
-        $this->update_link                    = base_url("Panel_admin_page_courses/update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->update_link                    = base_url("Panel_admin_page_events/update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      tabledeki melumatlarin add olunduqu link
-        $this->add_link                       = base_url("Panel_admin_page_courses/add/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->add_link                       = base_url("Panel_admin_page_events/add/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      tabledeki melumatlarin delete olunduqu link
-        $this->delete_link                    = base_url("Panel_admin_page_courses/delete/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->delete_link                    = base_url("Panel_admin_page_events/delete/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      ajaxnan melumatlarin modalin icine getirilmesi
-        $this->link_for_update_modal          = base_url("Panel_admin_page_courses/get_data_for_update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->link_for_update_modal          = base_url("Panel_admin_page_events/get_data_for_update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      proseslerden her hansi biri ugurla basa catdiqda hansi linke atsin
-        $this->success_link                   = base_url("Panel_admin_page_courses/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->success_link                   = base_url("Panel_admin_page_events/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      proseslerden her hansi biri ugurla basa catmadiqda hansi linke atsin
-        $this->error_link                     = base_url("Panel_admin_page_courses/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->error_link                     = base_url("Panel_admin_page_events/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      data tablenin icine melumatlarin ajaxnan getirilmesi ucun lazim olan link
-        $this->get_data_link                  = base_url("Panel_admin_page_courses/get_data");
+        $this->get_data_link                  = base_url("Panel_admin_page_events/get_data");
     }
 
     public function index()
@@ -197,9 +148,7 @@ class Panel_admin_page_courses extends MY_Controller{
     public function get_data()
     {
 
-        $config["additional_links"] = array(
-            "<i class=\"fas fa-users\"></i>" => "Panel_admin_page_course_teachers/index/"
-        );
+        $config["additional_links"] = array();
         $config["table_name"] = $this->table_name;
         $config["upload_path"] = $this->upload_path;
         $config["delete_link"] = $this->delete_link;

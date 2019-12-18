@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Panel_admin_page_additional_slide2 extends MY_Controller{
+class Panel_admin_page_study_abroad extends MY_Controller{
 
     private $view_folder = "";
     private $table_name= "";
@@ -15,7 +15,6 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
     private $get_data_link = "";
     private $input_name_type ="";
     private $field_names ="";
-    private $import_link ="";
     private $add_update_input_array  ="";
     private $table_file_field_names  ="";
 
@@ -25,18 +24,16 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
         parent::__construct();
 
 //      adminin icindeki papkanin adi
-        $this->view_folder = "additional_slide2";
+        $this->view_folder = "study_abroad";
 
 //      tablemizin adi
-        $this->table_name = "additional_slide2";
+        $this->table_name = "study_abroad";
 
 //      sekilleri ve fayllari yukleyeceyimiz yer meselen: base_url("uploads/teachers/")
-        $this->upload_path = "uploads/additional_slide2/";
+        $this->upload_path = "uploads/study_abroad/";
 
 //      eger sekil veya file varsa tablenin hansi fieldinnen adini goturub papkadan silsin
-        $this->table_file_field_names = array(
-            "img",
-        );
+        $this->table_file_field_names = array("img");
 
 //==============================================================================================
 
@@ -44,42 +41,46 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
         $this->field_names = $this->Core->list_fields($this->table_name);
 
         $this->label_name_and_input_name = array(
-            "Birinci Başlıqın Adı Az" => "(group1)title1_az(required)",
-            "Birinci Başlıqın Adı En" => "(group1)title1_en(required)",
-            "Birinci Başlıqın Adı Ru" => "(group1)title1_ru(required)",
 
-            "İkinci Başlıqın Adı Az" => "(group2)title2_az(required)",
-            "İkinci Başlıqın Adı En" => "(group2)title2_en(required)",
-            "İkinci Başlıqın Adı Ru" => "(group2)title2_ru(required)",
+            "Xaricdə Təhsil Başlıqı Az" => "(group1)name_az",
+            "Xaricdə Təhsil Başlıqı En" => "(group1)name_en",
+            "Xaricdə Təhsil Başlıqı Ru" => "(group1)name_ru",
 
-            "Slaydın linki" => "link",
+            "Xaricdə Təhsil Az" => "(group2)desc_az",
+            "Xaricdə Təhsil En" => "(group2)desc_en",
+            "Xaricdə Təhsil Ru" => "(group2)desc_ru",
 
-            "Servisin Şəkli" => "img",
+            "Xaricdə Təhsil Şəkli" => "img",
+
+            "YouTube Linki" => "link",
 
         );
 
         $this->input_name_type = array(
-            "title1_az" => "text",
-            "title1_en" => "text",
-            "title1_ru" => "text",
 
-            "title2_az" => "text",
-            "title2_en" => "text",
-            "title2_ru" => "text",
+            "name_az" => "text",
+            "name_en" => "text",
+            "name_ru" => "text",
+
+            "desc_az" => "editor",
+            "desc_en" => "editor",
+            "desc_ru" => "editor",
 
             "link" => "text",
 
-            "img" => "file",
+            "img" => "file"
+
         );
 
         $this->add_update_input_array = array(
-            "title1_az" => "title1_az",
-            "title1_en" => "title1_en",
-            "title1_ru" => "title1_ru",
 
-            "title2_az" => "title2_az",
-            "title2_en" => "title2_en",
-            "title2_ru" => "title2_ru",
+            "desc_az" => "(editor)desc_az",
+            "desc_en" => "(editor)desc_en",
+            "desc_ru" => "(editor)desc_ru",
+
+            "name_az" => "name_az",
+            "name_en" => "name_en",
+            "name_ru" => "name_ru",
 
             "link" => "link",
 
@@ -88,34 +89,22 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
         );
 
 
-
-
 //==============================================================================================
 
-
-//      tableye melumatlarin import edilmesi
-        $this->import_link                    = base_url("Panel_admin_page_additional_slide2/import/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
-
 //      tabledeki melumatlarin update olunduqu link
-        $this->update_link                    = base_url("Panel_admin_page_additional_slide2/update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
-
-//      tabledeki melumatlarin add olunduqu link
-        $this->add_link                       = base_url("Panel_admin_page_additional_slide2/add/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
-
-//      tabledeki melumatlarin delete olunduqu link
-        $this->delete_link                    = base_url("Panel_admin_page_additional_slide2/delete/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->update_link                    = base_url("Panel_admin_page_study_abroad/update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      ajaxnan melumatlarin modalin icine getirilmesi
-        $this->link_for_update_modal          = base_url("Panel_admin_page_additional_slide2/get_data_for_update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->link_for_update_modal          = base_url("Panel_admin_page_study_abroad/get_data_for_update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      proseslerden her hansi biri ugurla basa catdiqda hansi linke atsin
-        $this->success_link                   = base_url("Panel_admin_page_additional_slide2/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->success_link                   = base_url("Panel_admin_page_study_abroad/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      proseslerden her hansi biri ugurla basa catmadiqda hansi linke atsin
-        $this->error_link                     = base_url("Panel_admin_page_additional_slide2/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->error_link                     = base_url("Panel_admin_page_study_abroad/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      data tablenin icine melumatlarin ajaxnan getirilmesi ucun lazim olan link
-        $this->get_data_link                  = base_url("Panel_admin_page_additional_slide2/get_data");
+        $this->get_data_link                  = base_url("Panel_admin_page_study_abroad/get_data");
     }
 
     public function index()
@@ -132,7 +121,6 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
         $data["get_data_link"] = $this->get_data_link;
         $data["field_names"] = $this->field_names;
         $data["view_folder"] = $this->view_folder;
-        $data["import_link"] = $this->import_link;
         $this->load->view('admin/includes/index', $data);
     }
 
@@ -146,19 +134,6 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
         $config["link_for_update_modal"] = $this->link_for_update_modal;
 
         $this->data_table($config);
-
-    }
-
-    public function add()
-    {
-
-        $config["inputs_array"] = $this->add_update_input_array;
-        $config["success_link"] = $this->success_link;
-        $config["error_link"] =  $this->error_link;
-        $config["table_name"] = $this->table_name;
-        $config["upload_path"] = $this->upload_path;
-
-        $this->insert_db($config);
 
     }
 
@@ -193,30 +168,6 @@ class Panel_admin_page_additional_slide2 extends MY_Controller{
 
         $this->update_db($config);
 
-    }
-
-    public function delete($id)
-    {
-
-        $config["where"] = array(
-            "id"=> $id,
-        );
-        $config["table_file_field_names"] = $this->table_file_field_names;
-        $config["success_link"] = $this->success_link;
-        $config["error_link"] = $this->error_link;
-        $config["upload_path"] = $this->upload_path;
-        $config["table_name"] = $this->table_name;
-
-        $this->delete_db($config);
-
-
-    }
-
-    public function import()
-    {
-        $config["table_name"] = $this->table_name;
-        $config["field_names"] = $this->field_names;
-        $this->import_csv($config);
     }
 
 

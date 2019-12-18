@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0065a8ea-6927-4595-949b-8b9b05a1e535" name="Default Changelist" comment="" />
+    <list default="true" id="0065a8ea-6927-4595-949b-8b9b05a1e535" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_course_about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_course_teachers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_faqs_about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_messages_about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_study_abroad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_teachers_about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/course_teachers/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/event_about/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/info/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/messages_about/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/study_abroad/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/teachers_about/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Panel_admin_page_additional_slide.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_feedbacks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Panel_admin_page_additional_slide2.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_events_about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Panel_admin_page_courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Panel_admin_page_offers.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_login_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/about/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/about/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/additional_slide/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/course_about/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/additional_slide2/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feedbacks/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/course/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/course/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/includes/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/login/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/login/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/main_slide/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/main_slide/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/offers/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/events/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/offers/default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/offers/doc.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +44,17 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1V19CHpnujuUEMvuO4CKLag0aiH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/admin" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -53,10 +91,22 @@
       <workItem from="1576413781689" duration="4231000" />
       <workItem from="1576606231341" duration="1408000" />
       <workItem from="1576609126044" duration="3783000" />
+      <workItem from="1576667167119" duration="6341000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

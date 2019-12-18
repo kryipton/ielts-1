@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Panel_admin_page_offers extends MY_Controller{
+class Panel_admin_page_teachers_about extends MY_Controller{
 
     private $view_folder = "";
     private $table_name= "";
@@ -15,7 +15,6 @@ class Panel_admin_page_offers extends MY_Controller{
     private $get_data_link = "";
     private $input_name_type ="";
     private $field_names ="";
-    private $import_link ="";
     private $add_update_input_array  ="";
     private $table_file_field_names  ="";
 
@@ -25,18 +24,16 @@ class Panel_admin_page_offers extends MY_Controller{
         parent::__construct();
 
 //      adminin icindeki papkanin adi
-        $this->view_folder = "offers";
+        $this->view_folder = "teachers_about";
 
 //      tablemizin adi
-        $this->table_name = "offers";
+        $this->table_name = "teachers_about";
 
 //      sekilleri ve fayllari yukleyeceyimiz yer meselen: base_url("uploads/teachers/")
-        $this->upload_path = "uploads/offers/";
+        $this->upload_path = "";
 
 //      eger sekil veya file varsa tablenin hansi fieldinnen adini goturub papkadan silsin
-        $this->table_file_field_names = array(
-            "img",
-        );
+        $this->table_file_field_names = array();
 
 //==============================================================================================
 
@@ -44,83 +41,61 @@ class Panel_admin_page_offers extends MY_Controller{
         $this->field_names = $this->Core->list_fields($this->table_name);
 
         $this->label_name_and_input_name = array(
-            "Təklifin Adı Az" => "(group1)name_az(required)",
-            "Təklifin Adı En" => "(group1)name_en(required)",
-            "Təklifin Adı Ru" => "(group1)name_ru(required)",
 
-            "Təklifin Başlıqı Az" => "(group1)title_az(required)",
-            "Təklifin Başlıqı En" => "(group1)title_en(required)",
-            "Təklifin Başlıqı Ru" => "(group1)title_ru(required)",
+            "Müəllimlər Haqqında Başlıqı Az" => "(group2)name_az",
+            "Müəllimlər Haqqında Başlıqı En" => "(group2)name_en",
+            "Müəllimlər Haqqında Başlıqı Ru" => "(group2)name_ru",
 
-            "Təklif Haqqında Az" => "(group2)desc_az",
-            "Təklif Haqqında En" => "(group2)desc_en",
-            "Təklif Haqqında Ru" => "(group2)desc_ru",
+            "Müəllimlər Haqqında Az" => "(group2)desc_az",
+            "Müəllimlər Haqqında En" => "(group2)desc_en",
+            "Müəllimlər Haqqında Ru" => "(group2)desc_ru",
 
-            "Təklifin Şəkli" => "img",
 
         );
 
         $this->input_name_type = array(
+
             "name_az" => "text",
             "name_en" => "text",
             "name_ru" => "text",
-
-            "title_az" => "text",
-            "title_en" => "text",
-            "title_ru" => "text",
 
             "desc_az" => "editor",
             "desc_en" => "editor",
             "desc_ru" => "editor",
 
-            "img" => "file",
+
         );
 
         $this->add_update_input_array = array(
-            "name_az" => "name_az",
-            "name_en" => "name_en",
-            "name_ru" => "name_ru",
-
-            "title_az" => "title_az",
-            "title_en" => "title_en",
-            "title_ru" => "title_ru",
 
             "desc_az" => "(editor)desc_az",
             "desc_en" => "(editor)desc_en",
             "desc_ru" => "(editor)desc_ru",
 
-            "img" => "(file)img",
+            "name_az" => "name_az",
+            "name_en" => "name_en",
+            "name_ru" => "name_ru",
+
 
         );
 
 
-
-
 //==============================================================================================
 
-//      tableye melumatlarin import edilmesi
-        $this->import_link                    = base_url("Panel_admin_page_offers/import/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
-
 //      tabledeki melumatlarin update olunduqu link
-        $this->update_link                    = base_url("Panel_admin_page_offers/update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
-
-//      tabledeki melumatlarin add olunduqu link
-        $this->add_link                       = base_url("Panel_admin_page_offers/add/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
-
-//      tabledeki melumatlarin delete olunduqu link
-        $this->delete_link                    = base_url("Panel_admin_page_offers/delete/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->update_link                    = base_url("Panel_admin_page_teachers_about/update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      ajaxnan melumatlarin modalin icine getirilmesi
-        $this->link_for_update_modal          = base_url("Panel_admin_page_offers/get_data_for_update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->link_for_update_modal          = base_url("Panel_admin_page_teachers_about/get_data_for_update/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      proseslerden her hansi biri ugurla basa catdiqda hansi linke atsin
-        $this->success_link                   = base_url("Panel_admin_page_offers/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->success_link                   = base_url("Panel_admin_page_teachers_about/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      proseslerden her hansi biri ugurla basa catmadiqda hansi linke atsin
-        $this->error_link                     = base_url("Panel_admin_page_offers/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
+        $this->error_link                     = base_url("Panel_admin_page_teachers_about/");//bunnarin sonuna slash qoymaq vacibdir yoxsa islemez
 
 //      data tablenin icine melumatlarin ajaxnan getirilmesi ucun lazim olan link
-        $this->get_data_link                  = base_url("Panel_admin_page_offers/get_data");
+        $this->get_data_link                  = base_url("Panel_admin_page_teachers_about/get_data");
     }
 
     public function index()
@@ -137,8 +112,6 @@ class Panel_admin_page_offers extends MY_Controller{
         $data["get_data_link"] = $this->get_data_link;
         $data["field_names"] = $this->field_names;
         $data["view_folder"] = $this->view_folder;
-        $data["import_link"] = $this->import_link;
-
         $this->load->view('admin/includes/index', $data);
     }
 
@@ -152,19 +125,6 @@ class Panel_admin_page_offers extends MY_Controller{
         $config["link_for_update_modal"] = $this->link_for_update_modal;
 
         $this->data_table($config);
-
-    }
-
-    public function add()
-    {
-
-        $config["inputs_array"] = $this->add_update_input_array;
-        $config["success_link"] = $this->success_link;
-        $config["error_link"] =  $this->error_link;
-        $config["table_name"] = $this->table_name;
-        $config["upload_path"] = $this->upload_path;
-
-        $this->insert_db($config);
 
     }
 
@@ -201,29 +161,7 @@ class Panel_admin_page_offers extends MY_Controller{
 
     }
 
-    public function delete($id)
-    {
 
-        $config["where"] = array(
-            "id"=> $id,
-        );
-        $config["table_file_field_names"] = $this->table_file_field_names;
-        $config["success_link"] = $this->success_link;
-        $config["error_link"] = $this->error_link;
-        $config["upload_path"] = $this->upload_path;
-        $config["table_name"] = $this->table_name;
-
-        $this->delete_db($config);
-
-
-    }
-
-    public function import()
-    {
-        $config["table_name"] = $this->table_name;
-        $config["field_names"] = $this->field_names;
-        $this->import_csv($config);
-    }
 
 
 }

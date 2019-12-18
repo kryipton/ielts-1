@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Panel_admin_page_secure_login_page extends CI_Controller{
+class Admin extends CI_Controller{
 
     public function __construct()
     {
@@ -14,7 +14,7 @@ class Panel_admin_page_secure_login_page extends CI_Controller{
             $this->load->view('admin/login/content');
 
         }else{
-            redirect(base_url("Panel_admin_page_blog"));
+            redirect(base_url("Panel_admin_page_courses"));
         }
 
     }
@@ -39,19 +39,19 @@ class Panel_admin_page_secure_login_page extends CI_Controller{
                     $this->session->set_userdata("user", $user["id"]);
                     $this->session->set_userdata("user_role", $user["isAdmin"]);
                     $this->session->set_flashdata("success", "Daxil oldunuz");
-                    redirect(base_url("Panel_admin_page_blog"));
+                    redirect(base_url("Panel_admin_page_courses"));
                 }else{
                     $this->session->set_flashdata("alert", "İstifadəci adı vəya Şifrə yanlışdır");
-                    redirect(base_url("Panel_admin_page_secure_login_page"));
+                    redirect(base_url("Admin"));
                 }
 
             }else{
                 $this->session->set_flashdata("alert", "Boşluq Buraxmayın!");
-                redirect(base_url("Panel_admin_page_secure_login_page"));
+                redirect(base_url("Admin"));
             }
 
         }else{
-            redirect(base_url("Panel_admin_page_slide"));
+            redirect(base_url("Panel_admin_page_courses"));
         }
     }
 
@@ -60,9 +60,9 @@ class Panel_admin_page_secure_login_page extends CI_Controller{
         if (!empty($this->session->userdata("user"))){
             $this->session->unset_userdata("user");
             $this->session->set_flashdata("success", "Çıxıldı");
-            redirect(base_url("Panel_admin_page_secure_login_page"));
+            redirect(base_url("Admin"));
         }else{
-            redirect(base_url("Panel_admin_page_slide"));
+            redirect(base_url("Panel_admin_page_courses"));
         }
     }
 

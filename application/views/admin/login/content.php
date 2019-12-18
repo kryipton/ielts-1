@@ -49,7 +49,7 @@
                                     <h3 class="font-weight-500 my-2 py-1"><i class="fas fa-user"></i> Admin Panel :</h3>
                                 </div>
 
-                                <form action="<?php echo base_url("Panel_admin_page_secure_login_page/login")?>" method="post">
+                                <form action="<?php echo base_url("Admin/login")?>" method="post">
 
                                     <!-- Body -->
                                     <div class="md-form">

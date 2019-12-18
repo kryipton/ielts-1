@@ -9,28 +9,6 @@
         display: none;
     }
 
-    th:nth-child(6){
-        display: none;
-    }
-
-    td:nth-child(6){
-        display: none;
-    }
-
-    th:nth-child(7){
-        display: none;
-    }
-    td:nth-child(7){
-        display: none;
-    }
-
-    th:nth-child(8){
-        display: none;
-    }
-    td:nth-child(8){
-        display: none;
-    }
-
     th:nth-child(9){
         display: none;
     }
@@ -39,12 +17,34 @@
         display: none;
     }
 
+    th:nth-child(10){
+        display: none;
+    }
+    td:nth-child(10){
+        display: none;
+    }
 
+    th:nth-child(11){
+        display: none;
+    }
+    td:nth-child(11){
+        display: none;
+    }
 
     th:nth-child(12){
         display: none;
     }
+
     td:nth-child(12){
+        display: none;
+    }
+
+
+
+    th:nth-child(13){
+        display: none;
+    }
+    td:nth-child(13){
         display: none;
     }
 
@@ -69,6 +69,13 @@
         display: none;
     }
 
+    th:nth-child(17){
+        display: none;
+    }
+    td:nth-child(17){
+        display: none;
+    }
+
 
     th:nth-child(18){
         display: none;
@@ -77,22 +84,21 @@
         display: none;
     }
 
-    th:nth-child(19){
-        display: none;
-    }
-    td:nth-child(19){
-        display: none;
-    }
-
     .dt-buttons{
         display: none;
     }
 
+    .c_row_update{
+        display: none!important;
+    }
 </style>
 <!--tabledeki fieldleri gizletmek ucun olan style bunu external css in icinde yazma yoxsa diger seyfelerdeki tablelerde korlanar-->
 
 
 <section>
+
+
+
 
     <div class="card card-cascade narrower z-depth-0 pb-4">
 
@@ -107,7 +113,7 @@
                         class="fas fa-columns mt-0"></i></button>
             </div>
 
-            <a class="white-text mx-3">Kurslar</a>
+            <a class="white-text mx-3"><?php echo $course["name_az"]?> Kursunun Müəllimləri</a>
 
             <div style="visibility: hidden;">
                 <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><i
@@ -121,8 +127,8 @@
         </div>
         <!--tablenin basliqi-->
 
-        <div class="px-4">
 
+        <div class="px-4">
             <!-- Tablenin ozu -->
             <div class="table-responsive">
                 <!--Table-->
@@ -144,24 +150,23 @@
 
 
                         <th data-orderable="true" class="c_th_max_width"><a>id<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Adı Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Adı En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Adı Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Haqqında Az<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Haqqında En<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Haqqında Ru<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Qeydiyyatdan keçmiş istifadəçilər<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun tarixi<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Qiyməti<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursda iştirak edəcək maksimum tələbə sayı<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Şəkli<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Leksiyalar<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>İmtahanlar<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Müddəti<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Kursun Səviyyəsi<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>Sertifikat<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>qiymətləndirmələr<i class="fas fa-sort ml-1"></i></a></th>
-                        <th data-orderable="true" class="c_th_max_width"><a>qiymətləndirmələr<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin Adı Az<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin Adı En<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin Adı Ru<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin İxtisası Az<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin İxtisası En<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin İxtisası Ru<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Haqqında Az <i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Haqqında En<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Haqqında Ru<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim İnstagram Hesabı<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Facebook Hesabı<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Twitter Hesabı<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Telegram Hesabı<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim LinkeIn Hesabı<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllim Email Hesabı<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin Telefon Nömrəsi<i class="fas fa-sort ml-1"></i></a></th>
+                        <th data-orderable="true" class="c_th_max_width"><a>Müəllimin Şəkli<i class="fas fa-sort ml-1"></i></a></th>
 
 
                         <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Operations</a></th>

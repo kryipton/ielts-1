@@ -18,32 +18,7 @@
         display: none;
     }
 
-
-
-    th:nth-child(7){
-        display: none;
-    }
-
-    td:nth-child(7){
-        display: none;
-    }
-
-
-    th:nth-child(8){
-        display: none;
-    }
-
-    td:nth-child(8){
-        display: none;
-    }
-
-    th:nth-child(9){
-        display: none;
-    }
-
-    td:nth-child(9){
-        display: none;
-    }
+ 
 
 
     .c_row_delete{
@@ -120,13 +95,11 @@
                         </th>
 
                             <th data-orderable="false" class="c_th_max_width"><a>id</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Başlıqı AZ</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Başlıqı En</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Başlıqı Ru</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Şəkil</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda AZ</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda En</a></th>
-                            <th data-orderable="false" class="c_th_max_width"><a>Haqqımızda Ru</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Aktiv Tələbələr</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Aktiv Kurslar</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Məzunlar</a></th>
+                            <th data-orderable="false" class="c_th_max_width"><a>Mükafatlar</a></th>
+
 
                         <th data-orderable="false" class="c_operations" style="width: 53px!important;"><a>Əməliyyatlar</a></th>
 
